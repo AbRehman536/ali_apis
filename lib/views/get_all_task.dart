@@ -44,7 +44,7 @@ class GetAllTask extends StatelessWidget {
                 title: Text(taskListingModel.tasks![index].description.toString()),
                 trailing: Row(children: [
                   IconButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> UpdateTask(model: taskListingModel.tasks![index].id.toString())));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> UpdateTask(model: taskListingModel.tasks![index])));
                   }, icon: Icon(Icons.edit)),
                   IconButton(onPressed: ()async{
                     try{
