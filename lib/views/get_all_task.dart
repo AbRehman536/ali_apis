@@ -1,7 +1,9 @@
 import 'package:ali_apis/models/taskListing.dart';
 import 'package:ali_apis/services/task.dart';
 import 'package:ali_apis/views/create_task.dart';
+import 'package:ali_apis/views/filter_task.dart';
 import 'package:ali_apis/views/get_completed.dart';
+import 'package:ali_apis/views/search_task.dart';
 import 'package:ali_apis/views/update_task.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,6 +27,12 @@ class GetAllTask extends StatelessWidget {
           IconButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=> GetInCompletedTask()));
           }, icon: Icon(Icons.incomplete_circle)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> SearchTask()));
+          }, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> FilterTask()));
+          }, icon: Icon(Icons.filter)),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
